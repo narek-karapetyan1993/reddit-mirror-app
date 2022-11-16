@@ -77,11 +77,9 @@ export function CommentFormFormik({
           className={styles.input}
           onKeyUp={handleChange}
         />
-        <ErrorMessage
-          name="textAreaInput"
-          component="div"
-          className={styles.errorMessage}
-        />
+        <ErrorMessage name="textAreaInput" className={styles.errorMessage}>
+          {(validate) => <div>{validate}</div>}
+        </ErrorMessage>
         <button type="submit" className={styles.button}>
           Комментировать
         </button>
