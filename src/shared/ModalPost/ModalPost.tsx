@@ -69,8 +69,8 @@ export function ModalPost(posts: IModalPosts) {
             <CardPreview postPreviewSrc={postData.postPreviewSrc} />
             <Break size={36} top block />
             {/* <CommentFormContainer /> */}
-            <CommentFormRecoilContainer/>
-            {/* <CommentFormFormikContainer /> */}
+            {/* <CommentFormRecoilContainer/> */}
+            <CommentFormFormikContainer />
             <CommentList postId={postData.id}></CommentList>
           </div>
         </div>

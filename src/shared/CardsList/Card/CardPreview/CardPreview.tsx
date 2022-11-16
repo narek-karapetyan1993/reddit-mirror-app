@@ -11,7 +11,7 @@ export function CardPreview({ postPreviewSrc }: IPost) {
         !postPreviewSrc.endsWith('.gif') &&
         !postPreviewSrc.endsWith('.png'))
     ) {
-      return 'https://i.postimg.cc/CKcFLyWp/Velutto-1.webp';
+      return 'https://i.guim.co.uk/img/media/720d0630e3f30534d00bb008d177d488a8fce621/0_144_3500_2100/master/3500.jpg?width=620&quality=45&dpr=2&s=none';
     } else {
       return postPreviewSrc;
     }

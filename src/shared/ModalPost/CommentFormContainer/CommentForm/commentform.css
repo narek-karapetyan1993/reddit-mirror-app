@@ -1,6 +1,7 @@
 .form {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .input {
@@ -43,5 +44,8 @@
 }
 
 .errorMessage {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
   color: red;
 }
