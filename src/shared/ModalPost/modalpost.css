@@ -1,0 +1,64 @@
+.modalOverlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+  width: 100%;
+  overflow: auto;
+  padding-bottom: 10%;
+}
+
+.modal {
+  position: relative;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+  min-width: 200px;
+  min-height: 400px;
+  max-width: 80%;
+  padding: 24px;
+  margin-bottom: 25px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.headingBlock {
+  padding-left: 10px;
+}
+
+.headingInfo {
+  display: flex;
+  align-items: center;
+}
+
+.publishedLabel {
+  display: none;
+}
+
+.content {
+  overflow-y: auto;
+}
+
+.close {
+  align-self: flex-end;
+  width: 40px;
+  height: 40px;
+  margin: -24px;
+  color: #000;
+}
+
+@media all and (min-width: 1024px) {
+  .publishedLabel {
+    display: inline;
+  }
+}

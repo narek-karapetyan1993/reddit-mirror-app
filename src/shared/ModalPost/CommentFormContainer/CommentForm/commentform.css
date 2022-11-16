@@ -1,0 +1,43 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  height: 89px;
+  border: 1px solid #d9d9d9;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 3px 3px 0px 0px;
+  font-family: Roboto sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #999999;
+  resize: none;
+}
+
+.input[aria-invalid] {
+  border-color: red;
+}
+
+.button {
+  width: 220px;
+  height: 50px;
+  background: #cc6633;
+  border-radius: 0px 0px 3px 0px;
+  align-self: flex-end;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
