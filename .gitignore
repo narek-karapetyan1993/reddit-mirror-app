@@ -4,3 +4,5 @@
 .DS_store
 .idea
 .vscode
+package-lock.json
+
