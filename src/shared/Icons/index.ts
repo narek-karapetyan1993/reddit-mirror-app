@@ -9,3 +9,4 @@ export * from "./CarmaBtnIcon";
 export * from "./RatingBtnIcon";
 export * from "./ShareBtnIcon";
 export * from "./AnonIcon";
+export * from './CloseIcon';

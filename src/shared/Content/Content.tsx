@@ -1,15 +1,11 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import styles from './content.css';
 
-interface IContentProps {
-  children?: React.ReactNode
-}
-
-export function Content({children}: IContentProps) {
+export function Content() {
   return (
     <main className={styles.content}>
-      {children}
+      <Outlet />
     </main>
-
   );
 }

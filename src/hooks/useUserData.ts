@@ -6,7 +6,7 @@ import { MeState } from '../store/me/reducer';
 import { useToken } from './useToken';
 
 export function useUserData() {
-  const token = useToken();
+  const token = useSelector<RootState, string>((state) => state.token);
   const me = useSelector<RootState, MeState>((state) => state.me);
   const dispatch = useDispatch();
 

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import '@reach/dialog/styles.css';
 
 :root {
   --black: #333333;
@@ -47,7 +48,7 @@ a {
 
 button {
   padding: 0;
-  border: 0;
+  border: none;
   background: transparent;
   cursor: pointer;
 }

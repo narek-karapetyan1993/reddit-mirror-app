@@ -17,8 +17,7 @@ import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { PageNotFound } from './shared/PageNotFound';
 import { useIsMounted } from './utils/react/UseIsMounted';
 import { RecoilRoot } from 'recoil';
-
-
+import { ModalPost } from './shared/ModalPost';
 
 const store = createStore(
   rootReducer,
@@ -41,20 +40,7 @@ function AppComponent() {
       <RecoilRoot>
         {isMounted && (
           <BrowserRouter>
-            <Layout>
-              <Header />
-              <Content>
-                <Routes>
-                  <Route path="/" element={<Navigate to="/posts" replace />} />
-                  <Route path="/auth" element={<Navigate to="/posts" replace />} />
-                  <Route path="/auth/*" element={<Navigate to="/posts" replace />} />
-
-                  <Route path="/posts/*" element={<CardsList />} />
-
-                  <Route path="*" element={<PageNotFound />} />
-                </Routes>
-              </Content>
-            </Layout>
+            <Layout />
           </BrowserRouter>
         )}
       </RecoilRoot>

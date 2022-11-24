@@ -10,6 +10,7 @@ export enum EIcons {
   ratingBtn = "RatingBtnIcon",
   shareBtn = "ShareBtnIcon",
   anon = "AnonIcon",
+  close = "CloseIcon"
 }
 
 export enum EColor {

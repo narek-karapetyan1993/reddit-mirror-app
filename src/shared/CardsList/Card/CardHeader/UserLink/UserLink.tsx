@@ -41,7 +41,7 @@ export function UserLink({ author }: IPost) {
           <img src={viewAvatar()} alt="аватар" className={styles.avatar} />
 
           <a
-            href="src/shared/CardsList/Card/CardHeader/UserLink/UserLink#user-url"
+            href="#"
             className={styles.username}
           >
             <Text size={14} mobileSize={10} color={EColor.orange}>

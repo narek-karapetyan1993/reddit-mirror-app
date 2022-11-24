@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useToken } from './useToken';
+import { RootState } from '../store/reducer';
+import { useSelector } from 'react-redux';
 
 export interface IAuthorData {
   name?: string;
@@ -8,7 +9,7 @@ export interface IAuthorData {
 }
 
 export function useAuthorData(username?: string) {
-  const token = useToken();
+  const token = useSelector<RootState, string>((state) => state.token);
   const [authorData, setAuthorData] = useState<IAuthorData>({});
 
   useEffect(() => {
@@ -28,7 +29,7 @@ export function useAuthorData(username?: string) {
 
           setAuthorData({
             name: resAuthorData.data.name,
-            iconImg: resAuthorData.data.icon_img,
+            iconImg: resAuthorData.data.icon_img.split('?')[0],
           });
         })
         .catch(console.log);

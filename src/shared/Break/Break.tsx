@@ -3,7 +3,6 @@ import styles from "./break.css";
 import classNames from "classnames";
 
 type TBreakSize = 4 | 6 | 8 | 12 | 16 | 20 | 36;
-type TDisplays = "mobile" | "tablet" | "desktop";
 
 interface IBreakProps {
   size: TBreakSize;

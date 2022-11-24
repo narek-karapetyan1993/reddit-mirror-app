@@ -1,13 +1,13 @@
-import React from "react";
-import styles from "./genericlist.css";
-import { noop } from "../../utils/js/noop";
+import React from 'react';
+import styles from './genericlist.css';
+import { noop } from '../../utils/js/noop';
 
 interface IItem {
   id: string;
   text: React.ReactNode;
   onClick?: (id: string) => void;
   className?: string;
-  As?: "a" | "li" | "button" | "div";
+  As?: 'a' | 'li' | 'button' | 'div';
   href?: string;
   icon?: React.ReactNode;
 }
@@ -19,19 +19,12 @@ interface GenericListProps {
 export function GenericList({ list }: GenericListProps) {
   return (
     <>
-      {list.map(
-        ({ As = "div", text, onClick = noop, className, id, href, icon }) => (
-          <As
-            className={className}
-            onClick={() => onClick(id)}
-            key={id}
-            href={href}
-          >
-            {icon}
-            {text}
-          </As>
-        )
-      )}
+      {list.map(({ As = 'div', text, onClick = noop, className, id, href, icon }) => (
+        <As className={className} onClick={() => onClick(id)} key={id} href={href}>
+          {icon}
+          {text}
+        </As>
+      ))}
     </>
   );
 }

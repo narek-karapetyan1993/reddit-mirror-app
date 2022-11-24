@@ -1,14 +1,14 @@
-import React, { useEffect, useRef } from "react";
-import styles from "./menuitemslist.css";
-import { GenericList } from "../../../../GenericList";
-import { generateId } from "../../../../../utils/react/generateRandomIndex";
-import { Icon } from "../../../../Icon";
-import { Text } from "../../../../Text";
-import { EIcons } from "../../../../enumeration";
+import React, { useEffect, useRef } from 'react';
+import styles from './menuitemslist.css';
+import { GenericList } from '../../../../GenericList';
+import { generateId } from '../../../../../utils/react/generateRandomIndex';
+import { Icon } from '../../../../Icon';
+import { Text } from '../../../../Text';
+import { EIcons } from '../../../../enumeration';
 
 const LIST = [
   {
-    As: "li" as const,
+    As: 'li' as const,
     icon: <Icon name={EIcons.comment} size={12} />,
     text: (
       <Text size={12} mobileSize={12} tabletSize={14} desktopSize={14}>
@@ -27,7 +27,7 @@ const LIST = [
     className: `${styles.menuItem} ${styles.menuItemNone}`,
   },
   {
-    As: "li" as const,
+    As: 'li' as const,
     icon: <Icon name={EIcons.cancel} size={12} />,
     text: (
       <Text size={12} mobileSize={12} tabletSize={14} desktopSize={14}>
@@ -37,7 +37,7 @@ const LIST = [
     className: styles.menuItem,
   },
   {
-    As: "li" as const,
+    As: 'li' as const,
     icon: <Icon name={EIcons.save} size={12} />,
     text: (
       <Text size={12} mobileSize={12} tabletSize={14} desktopSize={14}>
@@ -47,7 +47,7 @@ const LIST = [
     className: `${styles.menuItem} ${styles.menuItemNone}`,
   },
   {
-    As: "li" as const,
+    As: 'li' as const,
     icon: <Icon name={EIcons.warning} size={14} />,
     text: (
       <Text size={12} mobileSize={12} tabletSize={14} desktopSize={14}>
@@ -72,9 +72,9 @@ export function MenuItemsList(props: IMenuItemsList) {
       if (event.target instanceof Node && !ref.current?.contains(event.target))
         props.onClose?.();
     }
-    document.addEventListener("click", handelClick);
+    document.addEventListener('click', handelClick);
     return () => {
-      document.removeEventListener("click", handelClick);
+      document.removeEventListener('click', handelClick);
     };
   }, []);
 

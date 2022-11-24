@@ -30,6 +30,7 @@ export function usePostData() {
     setNextAfter(after);
     setData((prevChildren) => prevChildren.concat(...posts));
   }, [after]);
+  // dispatch(PostRequestAsync(nextAfter));
 
   function handleClick() {
     setCount((prevCount) => prevCount + 1);

@@ -1,8 +1,10 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import styles from './cardpreview.css';
 import { IPost } from '../../../../store/posts/actions';
 
 export function CardPreview({ postPreviewSrc }: IPost) {
+  console.log(postPreviewSrc);
+  
   function viewPreview() {
     if (
       postPreviewSrc === undefined ||

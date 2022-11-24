@@ -3,14 +3,16 @@ import styles from './cardslist.css';
 import { Card } from './Card';
 import { IPost } from '../../store/posts/actions';
 import { generateRandomString } from '../../utils/react/generateRandomIndex';
-import { usePostData, IPostData } from '../../hooks/usePostData';
-import { useToken } from '../../hooks/useToken';
-import { ModalPost } from '../ModalPost';
-import { Route, Routes } from 'react-router-dom';
+import { IPostData } from '../../hooks/usePostData';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store/reducer';
 
-export function CardsList() {
-  const { postData } = usePostData();
-  const token = useToken();
+interface IModalPosts {
+  postData: IPostData;
+}
+
+export function CardsList({ postData }: IModalPosts) {
+  const token = useSelector<RootState, string>((state) => state.token);
   const endList = useRef(null);
 
   useEffect(() => {
@@ -56,10 +58,6 @@ export function CardsList() {
           ))}
         </ul>
       )}
-
-      <Routes>
-        <Route path=":id" element={<ModalPost posts={postData.posts} />} />
-      </Routes>
 
       {postData.loading && <div className={styles.loading}>Загрузка...</div>}
 

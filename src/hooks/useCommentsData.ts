@@ -1,8 +1,8 @@
-import { useContext, useEffect, useState } from "react";
-import axios from "axios";
-import { howLong } from "../utils/js/howLong";
-import { useSelector } from "react-redux";
-import { RootState } from "../store/reducer";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { howLong } from '../utils/js/howLong';
+import { useSelector } from 'react-redux';
+import { RootState } from '../store/reducer';
 
 export interface IComment {
   author?: string;
@@ -17,14 +17,11 @@ export function useCommentsData(postId: string | undefined) {
   const [commentsData, setCommentsData] = useState<IComment[]>([{}]);
 
   useEffect(() => {
-    if (token !== "undefined" && token !== "") {
+    if (token !== 'undefined' && token !== '') {
       axios
-        .get(
-          `https://oauth.reddit.com/comments/${postId}.json?sr_detail=true&limit=20`,
-          {
-            headers: { Authorization: `bearer ${token}` },
-          }
-        )
+        .get(`https://oauth.reddit.com/comments/${postId}.json?sr_detail=true&limit=20`, {
+          headers: { Authorization: `bearer ${token}` },
+        })
         .then((resp) => {
           const commentsResp = resp.data;
           const commentsChildren = commentsResp[1].data.children;
