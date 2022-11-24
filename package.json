@@ -7,10 +7,10 @@
   },
   "scripts": {
     "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
-    "build": "cross-env NODE_ENV=production CLIENT_ID=CDHw08PfjWrQq0_RZIKPFA SECRET=Brut-V37XLmFKt-fwWQah24Uh8zdPQ REDIRECT_NAME=https://reddit-mirror-app.onrender.com/auth webpack --config webpack.config.js",
+    "build": "env NODE_ENV=production CLIENT_ID=CDHw08PfjWrQq0_RZIKPFA SECRET=Brut-V37XLmFKt-fwWQah24Uh8zdPQ REDIRECT_NAME=https://reddit-mirror-app.onrender.com/auth webpack --config webpack.config.js",
     "dev": "cross-env NODE_ENV=development CLIENT_ID=ILIyzbfQCD7N1Rn38UZvKQ SECRET=nohhJnD21lRUNuTfRPKChr3-iyrNyw REDIRECT_NAME=http://localhost:3000/auth node ./bin/dev.js",
     "test": "jest",
-    "start": "cross-env CLIENT_ID=CDHw08PfjWrQq0_RZIKPFA SECRET=Brut-V37XLmFKt-fwWQah24Uh8zdPQ REDIRECT_NAME=https://reddit-mirror-app.onrender.com/auth node ./dist/server/server.js"
+    "start": "env CLIENT_ID=CDHw08PfjWrQq0_RZIKPFA SECRET=Brut-V37XLmFKt-fwWQah24Uh8zdPQ REDIRECT_NAME=https://reddit-mirror-app.onrender.com/auth node ./dist/server/server.js"
   },
   "author": "Narek_k",
   "license": "ISC",
