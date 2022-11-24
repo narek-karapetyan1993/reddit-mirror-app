@@ -71,7 +71,7 @@ export const PostRequestAsync =
       .get('https://oauth.reddit.com/best.json', {
         headers: { Authorization: `bearer ${getState().token}` },
         params: {
-          limit: 10,
+          limit: 15,
           after: afters,
         },
       })

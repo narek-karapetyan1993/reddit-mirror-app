@@ -16,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@hot-loader/react-dom": "^16.14.0",
-    "@reach/dialog": "^0.18.0",
+    "@reach/dialog": "^0.17.0",
     "@types/classnames": "^2.2.10",
     "@types/enzyme": "^3.10.12",
     "@types/enzyme-adapter-react-16": "^1.0.6",
@@ -25,7 +25,7 @@
     "@types/react-dom": "^16.9.16",
     "@types/react-redux": "^7.1.24",
     "@types/react-router-dom": "^5.3.3",
-    "axios": "^0.20.0",
+    "axios": "^1.2.0",
     "classnames": "^2.2.6",
     "clean-webpack-plugin": "^4.0.0",
     "compression": "1.7",
