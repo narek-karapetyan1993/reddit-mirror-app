@@ -1,3 +1,3 @@
 # reddit-mirror-app
 
-deploy: https://reddit-mirror-app.onrender.com
+Deploy: https://reddit-mirror-app.onrender.com
