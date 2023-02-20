@@ -1,6 +1,6 @@
 # Reddit-mirror-app with `SSR`
 
-update readmeReact-приложение, зеркало Reddit(с частью функциональности)
+React-приложение, зеркало Reddit(с частью функциональности)
 
 ## Запуск приложения
 -   установка зависимостей `npm install`
